@@ -10,6 +10,60 @@ Eight Cisco routers running EIGRP AS 1, built on PNETLab.
 
 ![EIGRP neighbors on Banha](neighbors.png)
 
+## EIGRP Network Statements per Router
+```
+! Cairo
+router eigrp 1
+network 10.1.1.0 0.0.0.255
+network 192.168.1.0
+
+! Menouf
+router eigrp 1
+network 10.1.1.0 0.0.0.255
+network 20.0.0.0
+network 192.168.2.0
+
+! Banha
+router eigrp 1
+network 20.0.0.0
+network 30.1.1.0 0.0.0.255
+network 80.0.0.0
+network 192.168.3.0
+
+! Mansoura
+router eigrp 1
+network 30.1.1.0 0.0.0.255
+network 40.0.0.0
+network 192.168.4.0
+
+! Aswan
+router eigrp 1
+network 40.0.0.0
+network 50.1.1.0 0.0.0.255
+network 80.0.0.0
+network 192.168.5.0
+
+! Marg
+router eigrp 1
+network 50.1.1.0 0.0.0.255
+network 60.0.0.0
+network 192.168.6.0
+
+! Toukh
+router eigrp 1
+network 60.0.0.0
+network 70.1.1.0 0.0.0.255
+network 192.168.7.0
+auto-summary
+
+! Ain Shams
+router eigrp 1
+network 0.0.0.0
+network 70.1.1.0 0.0.0.255
+network 172.16.0.0
+network 192.168.8.0
+```
+
 ## Task 1: Unconditional Gateway of Last Resort
 Router: Ain Shams
 ```
